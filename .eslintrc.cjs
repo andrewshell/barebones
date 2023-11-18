@@ -33,6 +33,12 @@ module.exports = {
         ],
       },
     ],
+    'import/extensions': [
+      'error',
+      {
+        js: 'ignorePackages',
+      },
+    ],
   },
   settings: {
     react: {
