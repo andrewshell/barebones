@@ -1,8 +1,14 @@
-# React + Vite
+# Barebones
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This template provides a minimal setup to get React working with Vite and a koa backend.
 
-Currently, two official plugins are available:
+## Development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* In one tab run `npm run api`
+* In second tab run `npm run dev`
+* Visit `http://localhost:5173/`
+
+## Production
+
+* Build React with `npm run build`
+* Run `node serve.js`
