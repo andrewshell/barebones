@@ -1,5 +1,5 @@
-import config from '../config.js';
 import Router from 'koa-router';
+import config from '../config';
 
 const router = new Router({
   prefix: '/api',

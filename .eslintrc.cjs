@@ -1,20 +1,46 @@
 module.exports = {
-  root: true,
-  env: { browser: true, es2020: true, node: true },
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
+  },
   extends: [
-    'eslint:recommended',
     'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
-    'plugin:react-hooks/recommended',
+    'airbnb',
   ],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
-  parserOptions: { ecmaVersion: 'latest', sourceType: 'module' },
-  settings: { react: { version: '18.2' } },
-  plugins: ['react-refresh'],
+  overrides: [
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  plugins: [
+    'react',
+  ],
   rules: {
-    'react-refresh/only-export-components': [
-      'warn',
-      { allowConstantExport: true },
+    'no-console': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/jsx-uses-react': 'off',
+    'react/jsx-uses-vars': 'error',
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        devDependencies: [
+          'vite.config.js',
+        ],
+      },
     ],
   },
-}
+  settings: {
+    react: {
+      version: '18.2',
+    },
+  },
+  ignorePatterns: [
+    'node_modules/*',
+    'dist/*',
+  ],
+};

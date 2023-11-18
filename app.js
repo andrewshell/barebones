@@ -1,6 +1,7 @@
+import 'dotenv/config';
 import Koa from 'koa';
-import serve from "koa-static";
-import api from './api/index.js';
+import serve from 'koa-static';
+import api from './api/index';
 
 const app = new Koa();
 
