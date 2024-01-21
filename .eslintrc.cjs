@@ -23,6 +23,7 @@ module.exports = {
   rules: {
     'no-console': 'off',
     'react/react-in-jsx-scope': 'off',
+    'react/jsx-one-expression-per-line': 'off',
     'react/jsx-uses-react': 'off',
     'react/jsx-uses-vars': 'error',
     'import/no-extraneous-dependencies': [

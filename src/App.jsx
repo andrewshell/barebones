@@ -7,8 +7,7 @@ function App() {
     <div className="text-3xl font-bold underline">Loading...</div>
   ) : (
     <div className="text-3xl font-bold underline">
-      {data.generator}
-      {data.status}
+      {data.generator} {data.status}
     </div>
   );
 }
