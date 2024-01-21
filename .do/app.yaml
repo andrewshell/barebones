@@ -1,0 +1,29 @@
+name: barebones
+ingress:
+  rules:
+  - component:
+      name: api
+    match:
+      path:
+        prefix: /api
+  - component:
+      name: website
+    match:
+      path:
+        prefix: /
+services:
+- name: api
+  environment_slug: node-js
+  run_command: node serve.js
+  github:
+    branch: master
+    deploy_on_push: true
+    repo: andrewshell/barebones
+static_sites:
+- name: website
+  build_command: npm run build
+  catchall_document: index.html
+  github:
+    branch: master
+    deploy_on_push: true
+    repo: andrewshell/barebones
