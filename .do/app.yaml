@@ -3,6 +3,7 @@ ingress:
   rules:
   - component:
       name: api
+      preserve_path_prefix: true
     match:
       path:
         prefix: /api
