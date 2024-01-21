@@ -16,15 +16,13 @@ spec:
   - name: api
     environment_slug: node-js
     run_command: node serve.js
-    github:
+    git:
       branch: master
-      deploy_on_push: true
-      repo: andrewshell/barebones
+      repo_clone_url: https://github.com/andrewshell/barebones.git
   static_sites:
   - name: website
     build_command: npm run build
     catchall_document: index.html
-    github:
+    git:
       branch: master
-      deploy_on_push: true
-      repo: andrewshell/barebones
+      repo_clone_url: https://github.com/andrewshell/barebones.git
